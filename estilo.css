@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fundo {
+    display: flex;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo .moldura {
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    border-top:  10px solid black;
+    border-left:  10px solid black;
+    border-right:  10px solid black;
+    border-bottom:  2px solid #80808020;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.fundo img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 1;
+    animation-name: logo;
+    animation-duration: 5s;
+}
+
+#interruptor {    
+    
+    margin-top: -140px;
+    margin-left: calc(50% - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+#interruptor .botao {
+    width: 5px;
+    height: 10px;
+    background-color: black;
+}
+
+#boneco {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-image: url(img/boneco_surpreso.jpg);
+    margin-top: -260px;
+    margin-left: calc(50% - 365px);
+    animation-name: bonecoAndando;
+    animation-duration: 15s;
+}
+
+.fundo .porta {
+    position: absolute;
+    width: 400px;
+    height: 350px;    
+    animation-name: portaSubindo;
+    animation-duration: 10s;
+    background-size: 100%;
+    background-image: url(img/porta.jpg);    
+    top: -100%;
+}
+
+@keyframes bonecoAndando {
+    0%{
+        margin-top: -260px;
+        margin-left: 0;
+        background-image: url(img/caminhando.gif);
+    }
+    25%{
+        margin-top: -260px;
+        margin-left: calc(50% - 365px);
+        background-image: url(img/caminhando.gif);
+    }  
+    26%{
+        margin-top: -260px;
+        margin-left: calc(50% - 365px);
+        background-image: url(img/boneco_uma_mao_levantada.jpg);
+    }
+    34%{
+        margin-top: -260px;
+        margin-left: calc(50% - 365px);
+        background-image: url(img/boneco_uma_mao_levantada.jpg);
+    }   
+    35%{
+        margin-top: -260px;
+        margin-left: calc(50% - 365px);
+        background-image: url(img/boneco_olhando_cima.jpg);
+    }
+     60%{
+        background-image: url(img/boneco_olhando_cima.jpg);
+     }
+     61%{
+        background-image: url(img/boneco_surpreso.jpg);
+     } 
+     100%{
+        background-image: url(img/boneco_surpreso.jpg);
+     }   
+}
+
+@keyframes portaSubindo {
+
+    0%{
+        top: 0%;
+        background-size: 100%;
+        background-image: url(img/porta.jpg);
+    }
+
+    40%{
+        top: 0%;
+        background-size: 100%;
+        background-image: url(img/porta.jpg);
+    }
+    100%{
+        background-size: 100%;
+        background-image: url(img/porta.jpg);
+        top: -100%
+    }
+
+}
+
+@keyframes logo {
+
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
